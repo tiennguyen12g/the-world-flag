@@ -46,7 +46,7 @@ function Filter(){
         setCheckList([])
     }
     const handleRegionChecked = (id) => {
-        navigate('/')
+        navigate('/the-world-flag')
         if(!checkList.includes(id)){
             setCheckList( prev => {
                 return [...prev,id]

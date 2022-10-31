@@ -1,23 +1,13 @@
 import classNames from "classnames/bind"
-import { createBrowserHistory } from "history"; //or import history from "history/browser" , if you use hash 'history/hash'
 import  styles from './Individual.module.scss'
-import { DataContext } from "../../ContextFile/DataContext";
-import { useCallback, useContext } from "react";
+import { useCallback, } from "react";
 import { useNavigate } from "react-router-dom";
-import { unstable_HistoryRouter } from "react-router-dom";
-
 
 const cx = classNames.bind(styles)
 function Individual({data}){
-    const datacontext = useContext(DataContext)
-    const countrys = datacontext.countrys
-    let history = createBrowserHistory()
     let navigate = useNavigate();
-    const pathname = window.location.pathname
     const onBack = useCallback(() => {
         navigate(-1)
-        console.log("in button");
-
     },[])
     return(
         <div className={cx('full-screen')}>

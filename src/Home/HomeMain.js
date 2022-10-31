@@ -13,7 +13,7 @@ const cx = classNames.bind(styles)
 function HomeMain(){
     const navigate = useNavigate()
     const onRefresh = () => {
-        navigate('/')
+        navigate('/the-world-flag')
         window.location.reload() 
     }
     return(
@@ -33,8 +33,8 @@ function HomeMain(){
                 </div>
                 <div className={cx('flag-item-show')}>
                      <Routes>
-                        <Route path="/the-world-flag" element={<Pagination />}>
-                             {['/the-world-flag',':pageID'].map((path) => (
+                        <Route path="/" element={<Pagination />}>
+                             {['/the-world-flag','/the-world-flag/:pageID'].map((path) => (
                                  <Route key={path} path={path} element={<FlagItemShow />} />
                             ))} 
                         </Route>

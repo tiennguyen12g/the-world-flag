@@ -1,15 +1,15 @@
-$moblie-width: 'only screen and (max-width:599px)';
-$moblie-horizontal-tablet-vertical: '(max-width:699px) and (orientation:landscape)';
+$mobile-width: 'only screen and (max-width:599px)';
+$mobile-horizontal-tablet-vertical: '(max-width:699px) and (orientation:landscape)';
 $tablet-width: 'screen and (min-width:600px) and (max-width: 1024px)';
 $desktop-width: 'screen and (min-width: 1025px)';
 @mixin respone($breakpoint) {
     @if $breakpoint == mobile {
-        @media #{$moblie-width}{
+        @media #{$mobile-width}{
             @content;
         }
     }
-    @if $breakpoint == moblie-tablet{
-        @media #{$moblie-horizontal-tablet-vertical}{
+    @if $breakpoint == mobile-tablet{
+        @media #{$mobile-horizontal-tablet-vertical}{
             @content;
         }
     }
@@ -79,12 +79,20 @@ $desktop-width: 'screen and (min-width: 1025px)';
     left: -2em;
 }
 @include respone(mobile){
+    .wrap{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100vw;
+        height: 160vh;
+        background-color: var(--light-background);
+    }
     .container{
         position: relative;
         max-width: 100vw;
         height: 100vmax;
         font-size: 10px;
-        padding: 0 4em;
+        padding: 0 1em;
         font-size: 10px;
     }
     .header{
@@ -104,6 +112,7 @@ $desktop-width: 'screen and (min-width: 1025px)';
         top: 2em;
         display: flex;
         justify-content: space-between;
+        height: 5em;
     }
     .flag-item-show{
         position: relative;

@@ -1,3 +1,29 @@
+$mobile-width: 'only screen and (max-width:599px)';
+$mobile-horizontal-tablet-vertical: '(max-width:699px) and (orientation:landscape)';
+$tablet-width: 'screen and (min-width:600px) and (max-width: 1024px)';
+$desktop-width: 'screen and (min-width: 1025px)';
+@mixin respone($breakpoint) {
+    @if $breakpoint == mobile {
+        @media #{$mobile-width}{
+            @content;
+        }
+    }
+    @if $breakpoint == mobile-tablet{
+        @media #{$mobile-horizontal-tablet-vertical}{
+            @content;
+        }
+    }
+    @if $breakpoint == tablet {
+        @media #{$tablet-width}{
+            @content;
+        }
+    }
+    @if $breakpoint == desktop {
+        @media #{$desktop-width}{
+            @content;
+        }
+    }      
+}
 .full-screen{
     width: 100vw;
     height: 100vh;
@@ -75,4 +101,88 @@ p.border{
     font-size: 16px;
     margin: 5px 2px;
     color: var(--light-color);
+}
+@include respone(mobile){
+    .full-screen{
+        width: 100vw;
+        height: 100vh;
+        background-color: var(--light-background);
+    }
+    .wrap{
+        position: relative;
+        top: 40px;
+        left: 0;
+        padding: 0 1em;
+        width: 1200px;
+        color: var(--light-color);
+    }
+    .back {
+        background-color: var(--light-element);
+        border: 1.5px solid gainsboro;
+        border-radius: 4px;
+        width: 100px;
+        height: 35px;
+        font-size: 16px;
+        padding: 6px 10px;
+        color: var(--light-color);
+    }
+    .flag{
+        position: relative;
+        top: 40px;
+        border: 0px solid gainsboro;
+        width: 100vw;
+        height: 100vh;
+        margin-right: 80px;
+        img{
+            position: absolute;
+            width: 92%;
+            height: 24%;
+            box-shadow: 0 0 10px var(--light-shadow);
+        }
+    }
+    .more-info{
+        position: absolute;
+        top: 300px;
+        left: 1em;
+    
+    }
+    .group1 p{
+        position: relative;
+        left: 0px;
+        top: 20px;
+        font-weight: 600;
+        font-size: 18px;
+        margin: 6px 0;
+    }
+    .group2 p{
+        position: relative;
+        left: 0px;
+        top: 20px;
+        font-weight: 600;
+        font-size: 18px;
+        margin: 6px 0;
+    }
+    p span{
+        font-weight: 400;
+    }
+    p.border{
+        position: relative;
+        top: 20px;
+        font-weight: 600;
+        font-size: 18px;
+        color: var(--light-color);
+    }
+    .border-btn{
+        position: relative;
+        left: -155px;
+        top: 35px;
+        background-color: var(--light-element);
+        border: 1.5px solid gainsboro;
+        border-radius: 4px;
+        width: 60px;
+        height: 30px;
+        font-size: 16px;
+        margin: 5px 2px;
+        color: var(--light-color);
+    }
 }

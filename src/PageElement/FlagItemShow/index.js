@@ -30,7 +30,7 @@ function FlagItemShow(){
                         let newName = country.name.common.replace(/\s/g,'')
                         return (
                             <Link
-                                to={pathname === `/the-world-flag/page${page.id}` ? `${newName.toLowerCase()}` : `the-world-flagpage${page.id}/${newName.toLowerCase()}`}
+                                to={pathname === `/the-world-flag/page${page.id}` ? `${newName.toLowerCase()}` : `page${page.id}/${newName.toLowerCase()}`}
                                 className={cx('container')} 
                                 key={i}
                             >

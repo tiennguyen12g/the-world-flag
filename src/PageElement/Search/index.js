@@ -21,7 +21,6 @@ function Search(){
     }
     let wordSearch = useDelay(inputValue,500)
     function renderResult() {
-        console.log();
         let newResult = []  
         if(wordSearch.length > 0){
             for(let page of arrayPageValue){
@@ -32,7 +31,6 @@ function Search(){
                 if(a.length > 0){
                     newResult.push({id: page.id, value: a})
                 }
-                console.log("newResult",newResult);
             }
         }
         return(
@@ -41,7 +39,7 @@ function Search(){
                     page.value.map((country,i) =>{
                         let NewName = country.name.common.replace(/\s/g,'')
                         return(
-                            <Link to={`page${page.id}/${NewName.toLowerCase()}`} className={cx('display-result')} key={i}>
+                            <Link to={`the-world-flag/page${page.id}/${NewName.toLowerCase()}`} className={cx('display-result')} key={i}>
                                 <img src={country.flags.png} alt='Cannot load data'/>
                                 <span>{country.name.common}</span>
                             </Link>)

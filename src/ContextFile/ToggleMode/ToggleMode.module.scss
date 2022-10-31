@@ -88,7 +88,7 @@ $moblie-width: 'only screen and (max-width:599px)';
 @include response(mobile){
     .toggle-mode{
         position: relative;
-        width: 60px ;
+        width: 4em ;
         height: 2em;
         border: 1px solid transparent;
         border-radius: 15px;
@@ -97,20 +97,21 @@ $moblie-width: 'only screen and (max-width:599px)';
         top: 50%;
         transform: translateY(-50%);
         padding: 0 18px;
+        font-size: 10px;
     }
     .circle{
         position: absolute;
-        width: 2em;
-        height: 2em;
+        width: 1.8em;
+        height: 1.8em;
         border: 1px solid transparent;
         border-radius: 50%;
-        margin-left: -16px;
+        margin-left: -18px;
         top: 50%;
-        margin-top: -1em;     
+        margin-top: -0.9em;     
     }
     .icon-effect{
         position: absolute;
-        left: 34px;
+        left: 25px;
         margin-top: 3px;
         .faSun{
             position: absolute;     
@@ -120,6 +121,50 @@ $moblie-width: 'only screen and (max-width:599px)';
             position: absolute;
             color: #fbde3c;
         }
+    }
+    .toggleLight{
+        background-color: rgb(228, 228, 228);
+        transform: translateX(0px);
+        animation: toggleLight 0.3s linear 1;
+    }
+    .toggleDark{
+        background-color: black;
+        transform: translateX(20px);
+        animation: toggleDark 0.3s linear 1;
+    }
+    @keyframes toggleLight {
+        0%{transform: translateX(20px);}
+        100%{transform: translateX(0);}   
+    }
+    @keyframes toggleDark {
+        0%{transform: translateX(0px);}
+        100%{transform: translateX(20px);}   
+    }
+    .sunLight{
+        visibility: hidden;
+        transform: translateX(0);
+    }
+    .moonLight{
+        visibility: visible;
+        transform: translateX(0);
+        animation: moontolight 0.3s linear 1;
+    }
+    .sunDark{
+        visibility: visible;
+        transform: translateX(-20px);
+        animation: suntodark 0.3s linear 1;
+    }
+    .moonDark{
+        visibility: hidden;
+        transform: translateX(-20px);
+    }
+    @keyframes suntodark {
+        0%{transform: translateX(0);}
+        100%{transform: translateX(-20px);}   
+    }
+    @keyframes moontolight {
+        0%{transform: translateX(-20px);}
+        100%{transform: translateX(0px);}   
     }
    
 }

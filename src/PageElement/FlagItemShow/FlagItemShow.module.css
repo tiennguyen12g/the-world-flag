@@ -103,26 +103,62 @@
 }
 @media only screen and (max-width: 599px) {
   .wrap {
+    position: relative;
     display: flex;
-    justify-content: space-between;
     flex-flow: wrap;
     width: 100%;
     height: 100%;
+    top: -4em;
   }
 
   .container {
     position: relative;
-    top: 1em;
-    width: 15em;
-    height: 19em;
+    width: 45%;
+    height: 27em;
     margin: 1em 1em;
-    border: 1px solid transparent;
+    border: 0px solid transparent;
     border-radius: 0.35em;
-    box-shadow: 0 0 0.5em gainsboro;
+    padding: 0;
+    overflow: hidden;
+    background-color: var(--light-element);
+    box-shadow: 0 0 10px var(--light-shadow);
+  }
+  .container .box {
+    position: relative;
+    padding: 0 1em;
+    margin: 0;
+    left: 0;
+  }
+  .container .box .image {
+    position: relative;
+    width: 120%;
+    height: 135px;
+    left: calc(-1.5em - 1px);
+    box-shadow: 0 0 10px var(--light-shadow);
+    border-radius: 4px;
+    padding: 0;
+  }
+  .container .box .name {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 0.2em;
+    margin-top: 0.2em;
+    color: var(--light-color);
+  }
+  .container .box .details {
+    margin: 0.3em 0;
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--light-color);
+  }
+  .container .box .details .info {
+    font-size: 14px;
+    font-weight: 500;
   }
 
-  .pagination {
+  .pagination-parent {
     position: relative;
     width: 100%;
+    right: 15px;
   }
 }
