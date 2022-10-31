@@ -20,7 +20,7 @@ function HomeMain(){
         <div className={cx('wrap')}>
             <div className={cx('header')}>
                 <div className={cx('box-content')}>
-                    <Link to='/' className={cx('title')} onClick={onRefresh}>
+                    <Link to='/the-world-flag' className={cx('title')} onClick={onRefresh}>
                          Where in the World ?
                     </Link>
                     <ToggleMode />
@@ -33,8 +33,8 @@ function HomeMain(){
                 </div>
                 <div className={cx('flag-item-show')}>
                      <Routes>
-                        <Route path="/" element={<Pagination />}>
-                             {['/',':pageID'].map((path) => (
+                        <Route path="/the-world-flag" element={<Pagination />}>
+                             {['/the-world-flag',':pageID'].map((path) => (
                                  <Route key={path} path={path} element={<FlagItemShow />} />
                             ))} 
                         </Route>

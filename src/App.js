@@ -13,13 +13,13 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path='/*' element={<HomeMain />}/>
+          <Route path='/the-world-flag/*' element={<HomeMain />}/>
           {arrayPageValue.map((page) =>(
             page.value.map((country,i) =>{
               let NewName = country.name.common.replace(/\s/g,'')
               return(
                 <Route 
-                  path={`page${page.id}/${NewName.toLowerCase()}`}
+                  path={`the-world-flag/page${page.id}/${NewName.toLowerCase()}`}
                   element={<Individual data={country} />} 
                   key={i}
                 />

@@ -65,17 +65,17 @@ function usePagination(data,ppp, limitshowing ){
         currentPage,
         render: (
             <div className={cx("pagination")}>
-                <Link to={'/page1'} disabled={currentPage === 1 ? true : false} onClick={toFirstPage} className={cx('link-router')}>
+                <Link to={'the-world-flag/page1'} disabled={currentPage === 1 ? true : false} onClick={toFirstPage} className={cx('link-router')}>
                     <FontAwesomeIcon icon={faAnglesLeft} />
                 </Link>
-                <Link to={`page${currentPage - 1}`} disabled={currentPage === 1 ? true : false} onClick={handlePrevious} className={cx('link-router')}>
+                <Link to={`the-world-flag/page${currentPage - 1}`} disabled={currentPage === 1 ? true : false} onClick={handlePrevious} className={cx('link-router')}>
                     <FontAwesomeIcon icon={faAngleLeft} />
                 </Link>
                 {arrayPageValue.map((page, index) =>{
                     if(page.id <= maxPageShow && page.id > minPageShow){
                         return(
                             <Link
-                                to={`page${page.id}`}
+                                to={`the-world-flag/page${page.id}`}
                                 key={index}
                                 className={cx('link-router', currentPage === page.id ? 'actived' : '')}
                                 onClick={() =>handlePageClick(page.id)}
@@ -87,10 +87,10 @@ function usePagination(data,ppp, limitshowing ){
                         return null
                     }
                 })}     
-                <Link to={`page${currentPage + 1}`} disabled={currentPage === totalPage ? true :false} onClick={handleNext} className={cx('link-router')}>
+                <Link to={`the-world-flag/page${currentPage + 1}`} disabled={currentPage === totalPage ? true :false} onClick={handleNext} className={cx('link-router')}>
                     <FontAwesomeIcon icon={faAngleRight} />
                 </Link>
-                <Link to={`page${totalPage}`} disabled={currentPage === totalPage ? true :false}  onClick={toLastPage} className={cx('link-router')}>
+                <Link to={`the-world-flag/page${totalPage}`} disabled={currentPage === totalPage ? true :false}  onClick={toLastPage} className={cx('link-router')}>
                     <FontAwesomeIcon icon={faAnglesRight} />
                 </Link>   
             </div>)
