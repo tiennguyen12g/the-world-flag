@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
+:root{
+    --light-background:rgb(250,250,250);
+    --light-element:rgb(255,255,255);
+    --light-shadow:rgb(225, 225, 225);
+    --light-hover:rgb(221, 220, 220);
+    --light-color:rgb(0, 0, 0);
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;  
+}
+html{
+    font-size: 18px;
+}
+body{
+    font-family: 'Nunito Sans', sans-serif;
+    overflow: auto;
+    scroll-behavior: auto;
+    text-rendering: optimizeLegibility;
+    line-height: normal;
+}
+$moblie-width: 'only screen and (min-width: 320px) and (max-width:374px)';
+$tablet-width: 'only screen and (min-width:768px) and (max-width: 991px)';
+$desktop-width: 'only screen and (min-width: 1200px)';
+@mixin moblie() { 
+    @media #{$moblie-width} {
+        @content;
+    }    
+}
+@mixin tablet() {
+    @media #{$tablet-width} {
+        @content;
+    }
+}
+@mixin desktop() {
+    @media #{$desktop-width} {
+        @content;
+    }   
+}
+@mixin respone($breakpoint) {
+    @if $breakpoint == mobile {
+        @media (max-width:600px){
+            @content;
+        }
+    }
+    @if $breakpoint == tablet {
+        @media (max-width:900px){
+            @content;
+        }
+    }
+    @if $breakpoint == desktop {
+        @media (min-width:1200px){
+            @content;
+        }
+    }      
+}
+
+html *::-webkit-scrollbar {
+    border-radius: 0;
+    width: 8px;
+}
+html *::-webkit-scrollbar {
+    border-radius: 0;
+    width: 8px;
+}
+html *::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, .15);
+}
+html *::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, .15);
+}
+html *::-webkit-scrollbar-track {
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0);
+}
+html *::-webkit-scrollbar-track {
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0);
+}
+a{
+    text-decoration: none;
+}
+a[disabled]{
+    pointer-events: none;
+    background-color: rgb(233, 233, 233);
+}
+    
