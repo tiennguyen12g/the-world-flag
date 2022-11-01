@@ -1,4 +1,4 @@
-import { HashRouter,Routes,Route } from 'react-router-dom';
+import { BrowserRouter,Routes,Route } from 'react-router-dom';
 import './App.css';
 import HomeMain from '../src/Home/HomeMain'
 import NoMatch from '../src/PageElement/NoMatch'
@@ -11,7 +11,7 @@ function App() {
   const arrayPageValue = datacontext.arrayPageValue
   return (
     <div className="App">
-      <HashRouter>
+      <BrowserRouter basename='/the-world-flag'>
         <Routes>
           <Route path='/*' element={<HomeMain />}/>
           {arrayPageValue.map((page) =>(
@@ -28,7 +28,7 @@ function App() {
           ))}
           <Route path='*' element={<NoMatch />} />
         </Routes>
-      </HashRouter>
+      </BrowserRouter>
     </div>
   );
 }
