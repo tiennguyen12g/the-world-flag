@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/the-world-flag/static/css/main.58a7f235.css",
-    "main.js": "/the-world-flag/static/js/main.807e7c78.js",
+    "main.css": "/the-world-flag/static/css/main.40e0044c.css",
+    "main.js": "/the-world-flag/static/js/main.677a4016.js",
     "static/js/787.ae52b42c.chunk.js": "/the-world-flag/static/js/787.ae52b42c.chunk.js",
     "index.html": "/the-world-flag/index.html",
-    "main.58a7f235.css.map": "/the-world-flag/static/css/main.58a7f235.css.map",
-    "main.807e7c78.js.map": "/the-world-flag/static/js/main.807e7c78.js.map",
+    "main.40e0044c.css.map": "/the-world-flag/static/css/main.40e0044c.css.map",
+    "main.677a4016.js.map": "/the-world-flag/static/js/main.677a4016.js.map",
     "787.ae52b42c.chunk.js.map": "/the-world-flag/static/js/787.ae52b42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.58a7f235.css",
-    "static/js/main.807e7c78.js"
+    "static/css/main.40e0044c.css",
+    "static/js/main.677a4016.js"
   ]
 }
