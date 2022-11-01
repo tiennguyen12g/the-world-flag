@@ -25,6 +25,7 @@ $desktop-width: 'screen and (min-width: 1025px)';
     }      
 }
 .filter{
+    position: relative;
     width: 18%;
     max-width: 180px;
     height: 3em;
@@ -33,7 +34,7 @@ $desktop-width: 'screen and (min-width: 1025px)';
     background-color: var(--light-element);
     color: var(--light-color);
     box-shadow: 0 0 0.5rem var(--light-shadow);
-    left: 0;
+    top: 0px;
 }
 .title{
     position: relative;
@@ -93,17 +94,20 @@ $desktop-width: 'screen and (min-width: 1025px)';
         position: relative;
         width: 38vw;
         height: 4.5em;
+        min-width: 160px;
         border: 1px solid transparent;
         border-radius: 0.35em;
         background-color: var(--light-element);
         color: var(--light-color);
         box-shadow: 0 0 0.5rem var(--light-shadow);
-        left: 0em;
+        top: 55px;
+        left: -160px;
+        z-index: 1;
     }
     .title{
         position: relative;
-        top: 1em;
-        left: 0.2em;
+        top: 0.8em;
+        left: 1.3em;
         font-size: 13px;
     }
     .arrow-down{
@@ -118,14 +122,12 @@ $desktop-width: 'screen and (min-width: 1025px)';
         float: right;
         top: -0.18em;
         margin-right: 1em;
-        visibility: hidden;
     }
     .box-tippy{
         position: relative;
-        width: calc(100% + 10px);
+        min-width: 160px;
         height: fit-content;
         top: 2em;
-        right: 1.2em;
         border: 1px solid transparent;
         border-radius: 0.2em;
         background-color: var(--light-element);
@@ -141,8 +143,7 @@ $desktop-width: 'screen and (min-width: 1025px)';
         padding: 0px 0%;
         font-size: 18px;
         font-weight: 600;
-        padding: 6px 0 0 10px;
-        
+        padding: 6px 0 0 16px; 
         &:hover{
             background-color: var(--light-hover);
             border-radius: 4px;

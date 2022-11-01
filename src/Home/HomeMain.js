@@ -5,7 +5,7 @@ import classNames from 'classnames/bind'
 import styles from './HomeMain.module.scss'
 import ToggleMode from '../ContextFile/ToggleMode/ToggleMode'
 
-import { memo } from "react"
+import { memo, useEffect } from "react"
 import { Link, Routes, Route } from "react-router-dom"
 import Pagination from "../PageElement/Pagination"
 import { useNavigate } from "react-router-dom"

@@ -1,7 +1,6 @@
 .search {
   position: relative;
   width: 33vw;
-  min-width: 280px;
   max-width: 320px;
   height: 3em;
   border: 0px solid transparent;
@@ -134,13 +133,19 @@ input::placeholder {
 @media only screen and (max-width:599px) {
   .search {
     position: relative;
-    width: 60vw;
+    width: 90%;
     height: 4.5em;
+    min-width: 100%;
     border: 0px solid transparent;
     border-radius: 0.35em;
     background-color: var(--light-element);
     box-shadow: 0 0 0.5rem var(--light-shadow);
     color: var(--light-color);
+  }
+  .search:hover {
+    width: 90%;
+    height: 4.5em;
+    min-width: 100%;
   }
 
   .inside-tippy {
@@ -179,7 +184,7 @@ input::placeholder {
   .box-tippy {
     position: relative;
     width: 33vw;
-    min-width: 280px;
+    min-width: 40px;
     max-width: 320px;
     height: 26em;
     max-height: 500px;

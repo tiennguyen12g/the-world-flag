@@ -109,7 +109,7 @@
     height: 2em;
     border: 1px solid transparent;
     border-radius: 15px;
-    left: -10px;
+    left: 0px;
     background-color: #2b6da6;
     top: 50%;
     transform: translateY(-50%);

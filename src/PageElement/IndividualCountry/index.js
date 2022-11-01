@@ -8,6 +8,7 @@ function Individual({data}){
     let navigate = useNavigate();
     const onBack = useCallback(() => {
         navigate(-1)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     },[])
     return(
         <div className={cx('full-screen')}>
@@ -17,7 +18,7 @@ function Individual({data}){
                     <img src={data.flags.png} alt="Cannot load"/>
                 </div>
                 <div className={cx('more-info')}>
-                    <h2>{data.name.common}</h2>
+                    <h2 className={cx('title')}>{data.name.common}</h2>
                     <div className={cx('group1')}>
                         <p>Native Name: &nbsp;<span>{data.name.common}</span></p>
                         <p>Population:&nbsp;<span>{data.population}</span></p>
@@ -30,12 +31,14 @@ function Individual({data}){
                         <p>Currencies: &nbsp;<span>{data.currencies.symbol}</span></p>
                         <p>Languages: &nbsp;<span>{data.languages.spa}</span></p>
                     </div>
-                    <p className={cx('border')}>
-                        Border Countries: &nbsp;
-                        {data.borders ? data.borders.map((symbolname, i) => (
-                            <button className={cx('border-btn')} key={i}>{symbolname}</button>
-                        )) : "No border with any country"} 
-                    </p>
+                    <div className={cx('border')}>
+                        <p className={cx('title')}>Border Countries: &nbsp;</p>
+                        <div className={cx('container')}>
+                            {data.borders ? data.borders.map((symbolname, i) => (
+                                <button className={cx('border-btn')} key={i}>{symbolname}</button>
+                            )) : "No border with any country"}
+                        </div> 
+                    </div>
                 </div>
             </div>
         </div>
